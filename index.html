@@ -20,7 +20,7 @@
       attribution: '&copy; OpenStreetMap contributors'
     }).addTo(map);
 
-    fetch('barrios.geojson')
+    fetch('SanIsidroRenabap2025reparado.geojson')
       .then(response => response.json())
       .then(data => {
         L.geoJSON(data, {
