@@ -8,7 +8,7 @@
   <style>
     body, html { margin: 0; padding: 0; }
     #map { height: 100vh; width: 100vw; }
-    /* Estilo para etiquetas fijas */
+    /* Estilo para etiquetas fijas (tooltip) */
     .my-label {
       font-weight: bold;
       color: #8B0000; /* rojo oscuro */
@@ -35,8 +35,8 @@
         L.geoJSON(data, {
           onEachFeature: function (feature, layer) {
             if (feature.properties && feature.properties.nombre) {
-              layer.bindPopup(`<strong>${feature.properties.nombre}</strong>`);
-              layer.bindTooltip(feature.properties.nombre, { permanent: true, direction: "center", className: "my-label" });
+              // Tooltip: nombre aparece al pasar el cursor sobre el barrio
+              layer.bindTooltip(feature.properties.nombre, { permanent: false, direction: "top", className: "my-label" });
             }
           },
           style: {
