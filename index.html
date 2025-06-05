@@ -30,7 +30,7 @@
       attribution: 'Tiles &copy; Esri &mdash; Source: Esri, Maxar, Earthstar Geographics, and the GIS User Community'
     }).addTo(map);
 
-    fetch('SanIsidroRenabap2025reparado.geojson')
+    fetch('sanisidiorenabap2025reparado.geojson')
       .then(response => response.json())
       .then(data => {
         L.geoJSON(data, {
